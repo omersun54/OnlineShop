@@ -1,6 +1,6 @@
 const express = require('express');
 const app= express();
-const{pool} = require("./databasepg");  
+const {pool} = require("./databasepg");  
 const morgan = require('morgan')
 const dotenv = require('dotenv')
 const port = process.env.PORT || 3110; 
@@ -13,10 +13,9 @@ const user = require('./models/users')
 dotenv.config();
 app.use(express.static('public'))
 app.set("view engine","ejs")
-app.use(express.urlencoded({extended:true})) // post işelmi sırasında değerleri göndermek için kullanılır.
-app.use(morgan('tiny'))                        //middleware
+app.use(express.urlencoded({extended:true}))        // post işelmi sırasında değerleri göndermek için kullanılır.
+app.use(morgan('tiny'))                        
 app.use(cookieParser())
-
 app.use('/admin',adminRoutes)
 app.use('/',authRoutes)
 app.use('*',checkUser)
@@ -84,9 +83,6 @@ app.use('*',checkUser)
      /* Sayfa Renderları :END */
 
   
-    
-   
-
     /* MiddleWare İşelmleri ve Routeslar  */
     
     app.use((req,res)=>{

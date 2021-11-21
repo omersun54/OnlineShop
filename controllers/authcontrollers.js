@@ -1,9 +1,7 @@
 const{pool} = require("../databasepg"); 
 const bcrypt = require('bcrypt');
-const jwtTokens = require("../utils/jwt_helpers");
 const jwt =require('jsonwebtoken');
 const { User } = require("../models/users");
-const user = require('../models/users')
 const maxAge =60*60*24
 const createToken =(id)=>{
   
