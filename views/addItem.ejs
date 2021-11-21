@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<%- include('inc/head'); %>
+</head>
+<body>
+  <%- include('inc/nav.ejs'); %>
+  <section>
+    <form action="/admin" method="post" autocomplete="off" >
+      <input type="number" name="fiyat" placeholder="fiyatı" required>
+      <input type="text" name="aciklama" placeholder="açıklama" required>
+      <input type="text" name="baslik" placeholder="Başlık" required> 
+      <input type="submit" value="kaydet" >
+
+    </form>
+  </section>
+</body>
+</html>

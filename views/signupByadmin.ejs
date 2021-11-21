@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<%- include('inc/head'); %>
+</head>
+<body>
+
+  <%- include('inc/nav.ejs'); %>
+    <div class="center"     >
+        <h1>SignUp</h1>
+        <form action="/signup" method="post" autocomplete="off">
+            <div class="txt_field">
+                <input type="text" name="username" required>
+                <span></span>
+                <label for="">Username</label>
+
+            </div>
+            <div class="txt_field">
+                <input type="password" name="password" required>
+                <span></span>
+                <label for="">Password</label>
+            </div>
+            <div class="txt_field">
+                <input type="checkbox" name="admin" >
+                <span></span>
+                <label for="">Admin mi ?</label>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <input type="submit" value="SignUp">
+         
+        </form>
+    </div>
+</body>
+</html>

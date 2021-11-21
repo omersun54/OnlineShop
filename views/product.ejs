@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<%- include('inc/head'); %>
+</head>
+<body>
+  <%- include('inc/nav.ejs'); %>
+ 
+            <table class="">
+                <thead>
+                    <th>
+                        <tr>
+                        <th> Başlık </th>
+                        <th> Yorum </th>
+                        <th> fiyat </th>
+                    </tr>
+                    </th> 
+                </thead>
+                <tbody>
+                    <% database.map(info=>{  %>
+                        <tr>
+                        <td> <%= info.title %> </td>
+                        <td> <%= info.coment %> </td>
+                        <td> <%= info.fiyat %> </td>
+                        <td>  <a href='/addSepet/'+<%= info.id %> >Sepete Ekle</a> </td>
+                        
+                        </tr>
+                    <% }) %>
+                </tbody>
+               
+            </table>
+           
+            
+      
+  
+</body>
+</html>
